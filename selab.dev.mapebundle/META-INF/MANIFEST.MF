@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: selab.dev.mapebundle
+Bundle-SymbolicName: selab.dev.mapebundle
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: ConfigurationComposer.service,
+ CollaborationMonitor.service,
+ CollaborationAnalyzer.service
+Export-Package: selab.dev.mapebundle
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-Activator: selab.dev.mapebundle.Activator

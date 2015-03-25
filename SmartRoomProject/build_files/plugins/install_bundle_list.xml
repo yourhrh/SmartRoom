@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bundle-list>
+    <bundle name="collaborationmonitor.service"/>
+    <bundle name="collaborationmonitor"/>
+    <bundle name="collaborationanalyzer.service"/>
+    <bundle name="collaborationanalyzer"/>
+    <bundle name="configurationcomposer.service"/>
+    <bundle name="configurationcomposer"/>
+    <bundle name="selab.dev.mapebundle"/>
+</bundle-list>
