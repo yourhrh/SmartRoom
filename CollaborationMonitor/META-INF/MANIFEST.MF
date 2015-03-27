@@ -3,8 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: CollaborationMonitor
 Bundle-SymbolicName: CollaborationMonitor
 Bundle-Version: 1.0.0.qualifier
-Require-Bundle: CollaborationMonitor.service,
- org.junit
+Require-Bundle: CollaborationMonitor.service
 Export-Package: CollaborationMonitor
 Import-Package: org.osgi.framework;version="1.7.0",
  room.info

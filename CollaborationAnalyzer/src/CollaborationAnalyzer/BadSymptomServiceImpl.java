@@ -30,33 +30,33 @@ public class BadSymptomServiceImpl implements BadSymptomService {
 		//designmodel is Preference Data
 		//currentBM is Room Data 0:temp 1:humi 2: bright
 		initRuleSet();
-		
+
 		//temperature
-		if((double)currentBM.get(0) < (double)designModel.get(0))
+		if((Double)currentBM.get(0) < (Double)designModel.get(0))
 		{
-			diffList.set(0, "Low " + ((double)designModel.get(0) - (double)currentBM.get(0)));
+			diffList.set(0, "Low " + ((Double)designModel.get(0) - (Double)currentBM.get(0)));
 		}
-		else if((double)currentBM.get(0) > (double)designModel.get(0))
+		else if((Double)currentBM.get(0) > (Double)designModel.get(1))
 		{
-			diffList.set(0, "High " + ((double)currentBM.get(1) - (double)designModel.get(0)));
+			diffList.set(0, "High " + ((Double)designModel.get(1) - (Double)currentBM.get(0)));
 		}
 		//humidity
-		if((double)currentBM.get(1) < (double)designModel.get(2))
+		if((Double)currentBM.get(1) < (Double)designModel.get(2))
 		{
-			diffList.set(0, "Low " + ((double)designModel.get(1) - (double)currentBM.get(2)));
+			diffList.set(1, "Low " + ((Double)designModel.get(2) - (Double)currentBM.get(1)));
 		}
-		else if((double)currentBM.get(1) > (double)designModel.get(3))
+		else if((Double)currentBM.get(1) > (Double)designModel.get(3))
 		{
-			diffList.set(0, "High " + ((double)currentBM.get(3) - (double)designModel.get(1)));
+			diffList.set(1, "High " + ((Double)designModel.get(3) - (Double)currentBM.get(1)));
 		}
 		//brightness
-		if((double)currentBM.get(2) < (double)designModel.get(4))
+		if((Double)currentBM.get(2) < (Double)designModel.get(4))
 		{
-			diffList.set(0, "Low " + ((double)designModel.get(2) - (double)currentBM.get(4)));
+			diffList.set(2, "Low " + ((Double)designModel.get(4) - (Double)currentBM.get(2)));
 		}
-		else if((double)currentBM.get(2) > (double)designModel.get(5))
+		else if((Double)currentBM.get(2) > (Double)designModel.get(5))
 		{
-			diffList.set(0, "High " + ((double)currentBM.get(5) - (double)designModel.get(2)));
+			diffList.set(2, "High " + ((Double)designModel.get(5) - (Double)currentBM.get(2)));
 		}
 		return diffList;
 	}

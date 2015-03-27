@@ -17,6 +17,7 @@ public class ContextMonitor implements IContextMonitor {
 		activate();
 		this.bundleContext = bundleContext;
 		System.out.println("ContextMonitor: start");	
+		Monitoring();
 	}
 	public void Monitoring() {
 		

@@ -44,6 +44,8 @@ public class UBMGeneratorServiceImpl implements UBMGeneratorService {
 			Method getPrefs = requestPreference.getClass().getDeclaredMethod("getPrefs", null);
 			try {
 				prefList = (List) getPrefs.invoke(requestPreference, null);
+				
+				System.out.println("Monitor pref SIze : " + prefList.size() );
 			} catch (IllegalAccessException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

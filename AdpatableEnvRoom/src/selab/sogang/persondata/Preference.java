@@ -3,6 +3,8 @@ package selab.sogang.persondata;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.util.Log;
+
 public class Preference {
 	private double lowTemp;
 	private double lowHumi;
@@ -37,6 +39,7 @@ public class Preference {
 	}
 	public List<Double> getPrefs()
 	{
+		Log.i("getPrefs","getPrefs");
 		ArrayList<Double> prefs = new ArrayList<Double>();
 		prefs.add(lowTemp);
 		prefs.add(highTemp);
@@ -44,6 +47,7 @@ public class Preference {
 		prefs.add(highHumi);
 		prefs.add(lowBright);
 		prefs.add(highBright);
+		Log.i("getPrefs","getPrefs Size : " + prefs.size());
 		return prefs;
 	}
 

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-
 import org.apache.felix.framework.Felix;
 import org.apache.felix.framework.util.FelixConstants;
 import org.osgi.framework.Bundle;
@@ -15,6 +14,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleException;
 import org.osgi.framework.ServiceReference;
 
+import selab.sogagn.adpatableenvroom.R;
 import android.app.Activity;
 import android.content.res.Resources;
 import android.util.Log;
@@ -87,6 +87,15 @@ public class BundleController {
 //			installAndStartBundle(R.raw.nulladaptreasoner, "nulladaptreasonser");
 //			installAndStartBundle(R.raw.collaborationmonitor, "collaborationmonitor");
 //			
+//			installAndStartBundle(, bundleName);
+			installAndStartBundle(R.raw.room, "room");
+			installAndStartBundle(R.raw.configurationcomposerservice, "configurationcomposerservice");
+			installAndStartBundle(R.raw.collaborationanalyerservice, "collaborationanalyerservice");
+			installAndStartBundle(R.raw.collaborationmonitorservice, "collaborationmonitorservice");
+			installAndStartBundle(R.raw.configurationcomposer, "configurationcompser");
+			installAndStartBundle(R.raw.collaborationanalyzer, "collaborationanalyzer");
+			installAndStartBundle(R.raw.collaborationmonitor, "collaborationmonitor");
+//			installAndStartBundle(R.raw.mapebundle, "mapebundle");
 			
 			
 			

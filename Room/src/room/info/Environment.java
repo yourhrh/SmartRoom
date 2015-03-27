@@ -10,6 +10,8 @@ public class Environment {
 		this.temp = temp;
 		this.humi = humi;
 		this.bright = bright;
+		
+		
 	}
 	public boolean equals(Environment env) {
 	
