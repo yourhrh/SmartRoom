@@ -7,7 +7,7 @@ import room.info.Room;
 
 public class Activator implements BundleActivator {
 
-	private static BundleContext context;
+	public static BundleContext context;
 	private Room room;
 
 	static BundleContext getContext() {

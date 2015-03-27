@@ -1,7 +1,10 @@
 package room.info;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 
+import room.Activator;
 import room.device.BlindController;
 import room.device.Device;
 
@@ -18,6 +21,7 @@ public class Room {
 		//env √ ±‚»≠ 
 		env = new Environment(temp, humi, bright);
 		initDevices();
+		drawEnv(this);
 	}
 
 	public Environment getEnv() {
@@ -97,6 +101,31 @@ public class Room {
 	public ArrayList<Device> getDevices() {
 		// TODO Auto-generated method stub
 		return deviceList;
+	}
+	private void drawEnv(Room room){
+		Object drawService = Activator.context.getService(Activator.context.getServiceReference
+				("selab.sogang.persondata.DrawService"));
+		try {
+			Method drawEnv = drawService.getClass().getDeclaredMethod("drawEnv", Double.class,Double.class,Double.class,Integer.class);
+			try {
+				drawEnv.invoke(drawService, room.getEnv().getTemp(),room.getEnv().getHumi(),room.getEnv().getBright(),room.getCost());
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

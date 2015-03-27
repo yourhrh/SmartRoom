@@ -48,15 +48,16 @@ public class BundleController {
 				IEffector.class.getName(), new Effector((TabView) effectorParam), null);
 		*/
 		/* install bundles */
-		installBundles();
+		
 	
 	}
+	
 	
 	public void setEffector(Object effectorParam) {
 		
 	}
 
-	private void installBundles()  {
+	public void installBundles()  {
 		
 		
 		try {

@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
     			new DrawService(), null);
         this.requestController = new RequestController(bundleController);        
         requestController.setPreference(23,26,45,50,38,42);
+        bundleController.installBundles();
         adaptButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
